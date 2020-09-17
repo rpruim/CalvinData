@@ -10,7 +10,8 @@ Malaria <-
     do(6) * tibble(group = "placebo", malaria = "yes")
   ) %>% shuffle() %>%
   mutate(group = factor(group), malaria = factor(malaria)) %>%
-  select(group, malaria)
+  select(group, malaria) %>%
+  as_tibble()
 
 Malaria2 <-
   Malaria %>%
